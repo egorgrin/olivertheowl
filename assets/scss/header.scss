@@ -1,0 +1,98 @@
+header {
+  background-color: $c-main;
+
+  .content {
+    @extend .flex;
+    @extend .wrapper;
+    height: 100px;
+    padding: 0 60px;
+  }
+
+  .logo {
+    @extend .flex;
+
+    .container {
+      width: 100px;
+    }
+
+    margin-right: calc(2rem + 9px);
+  }
+
+  nav {
+    @extend .flex;
+    flex-grow: 1;
+    font-size: 1.4rem;
+
+    a {
+      padding: 0 1.2rem;
+      color: $c-text-pale;
+
+      &:hover {
+        color: $c-text;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .icons {
+    @extend .flex;
+    gap: 20px;
+    justify-content: flex-end;
+
+    .element {
+      cursor: pointer;
+      justify-content: center;
+    }
+
+    a:hover {
+      transform: scale(1.1);
+    }
+
+    .container {
+      width: 24px;
+    }
+
+    .element:nth-child(2) .container {
+      width: 22px;
+    }
+
+    img {
+      color: $c-text;
+    }
+  }
+
+  .burger {
+    display: none;
+
+    .container {
+      width: 24px;
+
+      &.hide {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .burger {
+      display: flex;
+    }
+    nav {
+      display: none;
+    }
+
+    .burger, .icons {
+      flex-basis: 15%;
+    }
+    .logo {
+      flex-grow: 1;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content {
+      padding: 0 10px;
+    }
+  }
+}

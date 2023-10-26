@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=service.css.map */

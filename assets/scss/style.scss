@@ -1,0 +1,17 @@
+@import "cssdrop";
+@import "service";
+@import "fonts";
+@import "swiper";
+
+:root {
+  font-size: 12px;
+  color: $c-text;
+}
+
+body {
+  font-family: Eczar, sans-serif;
+  font-size: 1rem;
+}
+
+@import "header";
+@import "hero";

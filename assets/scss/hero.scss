@@ -1,0 +1,20 @@
+.hero {
+  background-color: $c-main;
+
+  .content {
+    @extend .flex;
+    @extend .wrapper;
+    gap: 20px;
+
+  }
+
+  .section {
+    flex-basis: 50%;
+    //Swiper bug fix
+    min-width: 0;
+    .left {
+      display: flex;
+    }
+  }
+
+}
