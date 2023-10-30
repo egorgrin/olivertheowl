@@ -5,12 +5,5 @@
   font-weight: 400;
   src: url("../fonts/eczar.woff2") format("woff2");
 }
-@font-face {
-  font-display: swap;
-  font-family: "Test";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/test.otf");
-}
 
 /*# sourceMappingURL=fonts.css.map */

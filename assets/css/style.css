@@ -112,7 +112,7 @@ h6 {
   margin: 0 auto;
 }
 
-.brand_shadow:before, .hero .quantity:before, .hero form .select:before, .brand_shadow:after, .hero .quantity:after, .hero form .select:after {
+.btn_shadow:before, .hero .quantity:before, .hero form .select:before, .btn_shadow:after, .hero .quantity:after, .hero form .select:after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -122,10 +122,10 @@ h6 {
   left: 0;
   border-radius: 12px;
 }
-.brand_shadow:before, .hero .quantity:before, .hero form .select:before {
+.btn_shadow:before, .hero .quantity:before, .hero form .select:before {
   box-shadow: rgb(53, 80, 128) 0px 4px 1px 0px;
 }
-.brand_shadow:after, .hero .quantity:after, .hero form .select:after {
+.btn_shadow:after, .hero .quantity:after, .hero form .select:after {
   box-shadow: rgb(53, 80, 128) 0px 0px 0px 2px;
 }
 
@@ -136,13 +136,6 @@ h6 {
   font-weight: 400;
   src: url("../fonts/eczar.woff2") format("woff2");
 }
-@font-face {
-  font-display: swap;
-  font-family: "Test";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/test.otf");
-}
 .swiper {
   width: 80%;
   margin-left: auto;
@@ -150,6 +143,7 @@ h6 {
 }
 
 .swiper-slide {
+  cursor: pointer;
   text-align: center;
   font-size: 18px;
   display: flex;
@@ -199,6 +193,16 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: rgba(53, 80, 128, 0.75);
+  top: 90%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 :root {

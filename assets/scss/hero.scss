@@ -90,7 +90,7 @@
     }
 
     .select {
-      @extend .brand_shadow;
+      @extend .btn_shadow;
       position: relative;
       display: flex;
       width: 100%;
@@ -114,7 +114,7 @@
   .quantity {
     position: relative;
     @extend .flex;
-    @extend .brand_shadow;
+    @extend .btn_shadow;
     border-radius: $brad;
     width: 25%;
     min-height: 4.5rem;
