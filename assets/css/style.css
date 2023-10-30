@@ -102,7 +102,7 @@ h6 {
 }
 
 /*--------------------*/
-.flex, .hero .info_block .title, .hero .quantity, header .icons, header nav, header .logo, header .content {
+.flex, .hero .info_block .title, .hero .quantity, .hero .quantity_wrapper, header .icons, header nav, header .logo, header .content {
   display: flex;
   align-items: center;
 }
@@ -327,6 +327,9 @@ header .burger .container.hide {
 .hero form input {
   margin-bottom: 1.6rem;
 }
+.hero .select option {
+  cursor: pointer;
+}
 .hero .right {
   padding: 2rem 5rem 2rem 0;
 }
@@ -391,12 +394,11 @@ header .burger .container.hide {
 .hero .quantity {
   position: relative;
   border-radius: 12px;
-  width: 25%;
   min-height: 4.5rem;
 }
 .hero .quantity_button {
-  width: 4rem;
   flex-shrink: 0;
+  width: 4rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -410,10 +412,10 @@ header .burger .container.hide {
   width: 1.2rem;
 }
 .hero .quantity_input {
+  max-width: 40px;
   font-size: 1.4rem;
   opacity: 0.85;
   text-align: center;
-  width: 100%;
   flex-grow: 1;
   margin-bottom: 0;
 }
@@ -502,6 +504,65 @@ header .burger .container.hide {
   border: 2px solid rgb(53, 80, 128);
   border-radius: 12px;
   max-width: 85%;
+}
+
+@media (max-width: 991px) {
+  .hero .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .hero .left, .hero .right {
+    padding: 2rem 5rem;
+  }
+  .hero .right h1, .hero .right .reviews {
+    text-align: center;
+  }
+  .hero .right .price_block {
+    text-align: right;
+  }
+  .hero .right .reviews span {
+    display: block;
+    margin-top: 0.5rem;
+  }
+  .hero .right form .select {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    /*.left {
+      order: 1;
+    }
+    .right {
+      order: 0;
+    }*/
+  }
+  .hero .content {
+    gap: 20px;
+  }
+  .hero .left, .hero .right {
+    padding: 1rem 2rem;
+  }
+  .hero .slider {
+    height: 500px;
+  }
+  .hero .swiper-button-next, .hero .swiper-button-prev {
+    top: 93%;
+  }
+  .hero .mySwiper {
+    height: 25%;
+  }
+}
+@media (max-width: 424px) {
+  .hero .swiper-button-next, .hero .swiper-button-prev {
+    display: none;
+  }
+  .hero .slider {
+    height: 360px;
+  }
+  .hero .swiper {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

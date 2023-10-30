@@ -21,6 +21,7 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   slidesPerView: 4,
+  slidesPerGroup: 4,
   freeMode: true,
   watchSlidesProgress: true,
 });
