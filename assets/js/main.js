@@ -13,19 +13,19 @@
 
 }); */
 
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper('.mySwiper', {
   direction: 'horizontal',
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   slidesPerView: 4,
   slidesPerGroup: 4,
   freeMode: true,
   watchSlidesProgress: true,
 });
-const swiper2 = new Swiper(".mySwiper2", {
+const swiper2 = new Swiper('.mySwiper2', {
   direction: 'horizontal',
   spaceBetween: 10,
   /*navigation: {
@@ -35,4 +35,18 @@ const swiper2 = new Swiper(".mySwiper2", {
   thumbs: {
     swiper: swiper,
   },
+});
+const swiper3 = new Swiper('.mySwiper3', {
+  loop: true,
+  direction: 'horizontal',
+  spaceBetween: 10,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
 });

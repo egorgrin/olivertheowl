@@ -1,6 +1,6 @@
 footer {
   padding: 5rem 0 2rem;
-  background-color: $footer-bg;
+  background-color: $blue-bg;
 
   .upper {
     display: flex;
@@ -48,17 +48,20 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      .list_payment {
+        display: flex;
+        margin-bottom: 1.5rem;
+        gap: 10px;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.75);
+        letter-spacing: 0.84px;
+      }
     }
 
-    .list_payment {
-      display: flex;
-      margin-bottom: 1.5rem;
-    }
 
-    span {
-      color: rgba(255, 255, 255, 0.75);
-      letter-spacing: 0.84px;
-    }
   }
 
 
@@ -71,7 +74,7 @@ footer {
 
     .upper {
       flex-wrap: wrap;
-      padding-bottom: 0;
+      padding: 0 2rem;
 
       .links {
         flex-basis: 100%;
@@ -93,11 +96,13 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        span {
+          font-size: 0.9rem;
+        }
       }
 
-      span {
-        font-size: 0.9rem;
-      }
+
     }
   }
 }

@@ -102,7 +102,7 @@ h6 {
 }
 
 /*--------------------*/
-.flex, .hero .info_block .title, .hero .quantity, .hero .quantity_wrapper, header .icons, header nav, header .logo, header .content {
+.flex, .advantages .banner_wrapper, .hero .info_block .title, .hero .quantity, .hero .quantity_wrapper, header .icons, header nav, header .logo, header .content {
   display: flex;
   align-items: center;
 }
@@ -163,8 +163,6 @@ h6 {
 .swiper-slide {
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
-  border: 3px solid #355080;
 }
 
 .mySwiper2 {
@@ -195,16 +193,6 @@ h6 {
   object-fit: cover;
 }
 
-.swiper-button-next, .swiper-button-prev {
-  color: rgba(53, 80, 128, 0.75);
-  top: 90%;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 12px;
-  font-weight: bold;
-}
-
 :root {
   font-size: 12px;
   color: #355080;
@@ -215,6 +203,7 @@ body,
 select {
   font-family: Eczar, sans-serif;
   font-size: 1rem;
+  background-color: #ecc83c;
 }
 
 body {
@@ -321,6 +310,18 @@ header .burger .container.hide {
   height: 600px;
   position: sticky;
   top: 0;
+}
+.hero .slider .swiper-button-next, .hero .slider .swiper-button-prev {
+  color: rgba(53, 80, 128, 0.75);
+  top: 90%;
+}
+.hero .slider .swiper-button-next:after, .hero .slider .swiper-button-prev:after {
+  font-size: 12px;
+  font-weight: bold;
+}
+.hero .slider .swiper-slide {
+  border-radius: 15px;
+  border: 3px solid #355080;
 }
 .hero .right > *,
 .hero .select,
@@ -450,7 +451,7 @@ header .burger .container.hide {
   box-shadow: 0px 2px 5px 0px rgba(53, 80, 128, 0.9);
 }
 .hero .buttons_block button:hover {
-  box-shadow: rgba(108, 130, 169, 0.6) 0px 0px 0px 3px;
+  box-shadow: 0px 2px 5px 2px rgba(53, 80, 128, 0.5);
   transition: box-shadow 0.1s ease;
 }
 .hero .info_block h2 {
@@ -547,7 +548,7 @@ header .burger .container.hide {
     height: 500px;
   }
   .hero .swiper-button-next, .hero .swiper-button-prev {
-    top: 93%;
+    top: 93% !important;
   }
   .hero .mySwiper {
     height: 25%;
@@ -562,6 +563,129 @@ header .burger .container.hide {
   }
   .hero .swiper {
     width: 100%;
+  }
+}
+.banner {
+  width: auto;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
+}
+.banner h2 {
+  font-size: 32px;
+  margin-bottom: 2.5rem;
+}
+.banner p {
+  font-size: 20px;
+  letter-spacing: 0.72px;
+  line-height: 32px;
+}
+
+.advantages .banner_wrapper {
+  padding: 20rem 5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.advantages .banner_wrapper .banner {
+  background-color: #6C82A9;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 4rem 3.5rem;
+  max-width: 90rem;
+}
+.advantages .banner_wrapper.b4 {
+  padding: 10rem 5rem;
+}
+.advantages .slider_wrapper .banner_wrapper {
+  height: 120vh;
+}
+.advantages .slider_wrapper .banner {
+  background-color: #ecc83c;
+  color: #355080;
+  border: 2px solid #355080;
+  max-width: 70rem;
+}
+.advantages .slider_wrapper .mySwiper3 {
+  position: relative;
+  width: 100%;
+}
+.advantages .slider_wrapper .slider {
+  position: relative;
+}
+.advantages .b1 {
+  background-image: url(../img/banners/b1.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .b2 {
+  background-image: url(../img/banners/b2.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .b3 {
+  background-image: url(../img/banners/b3.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .b4 {
+  background-image: url(../img/banners/b4.webp);
+  background-size: contain;
+  background-position: bottom center;
+}
+.advantages .b5 {
+  background-image: url(../img/banners/b5.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .s1 {
+  background-image: url(../img/banners/s1.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .s2 {
+  background-image: url(../img/banners/s2.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .s3 {
+  background-image: url(../img/banners/s3.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+.advantages .s4 {
+  background-image: url(../img/banners/s4.webp);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+@media (max-width: 767px) {
+  .advantages .banner_wrapper {
+    padding: 30rem 0 0rem;
+  }
+  .advantages .banner_wrapper .banner {
+    text-align: left;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .advantages .banner_wrapper .banner h2 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  .advantages .banner_wrapper .banner p {
+    font-size: 16px;
+    letter-spacing: 0.72px;
+    line-height: 28px;
+  }
+  .advantages .slider_wrapper .banner_wrapper {
+    height: auto;
+    padding: 50rem 0 0rem;
+  }
+}
+@media (max-width: 423px) {
+  .banner {
+    padding: 3rem 2rem;
   }
 }
 footer {
@@ -606,11 +730,12 @@ footer .bottom .copyright_block {
   flex-direction: column;
   align-items: flex-end;
 }
-footer .bottom .list_payment {
+footer .bottom .copyright_block .list_payment {
   display: flex;
   margin-bottom: 1.5rem;
+  gap: 10px;
 }
-footer .bottom span {
+footer .bottom .copyright_block span {
   color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.84px;
 }
@@ -621,7 +746,7 @@ footer .bottom span {
   }
   footer .upper {
     flex-wrap: wrap;
-    padding-bottom: 0;
+    padding: 0 2rem;
   }
   footer .upper .links {
     flex-basis: 100%;
@@ -640,7 +765,7 @@ footer .bottom span {
     flex-direction: column;
     align-items: center;
   }
-  footer .bottom span {
+  footer .bottom .copyright_block span {
     font-size: 0.9rem;
   }
 }

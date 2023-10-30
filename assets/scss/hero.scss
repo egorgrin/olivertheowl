@@ -25,7 +25,22 @@
     padding-top: 2rem;
     height: 600px;
     position: sticky;
-    top: 0
+    top: 0;
+
+    .swiper-button-next, .swiper-button-prev {
+      color: rgba(53, 80, 128, 0.75);
+      top: 90%;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .swiper-slide {
+      border-radius: 15px;
+      border: 3px solid $c-text;
+    }
   }
 
   .right > *,
@@ -188,7 +203,7 @@
       }
 
       &:hover {
-        box-shadow: rgb(108, 130, 169, 0.6) 0px 0px 0px 3px;
+        box-shadow: 0px 2px 5px 2px rgba(53, 80, 128, 0.5);
         transition: box-shadow 0.1s ease;
       }
     }
@@ -317,7 +332,7 @@
     }
 
     .swiper-button-next, .swiper-button-prev {
-      top: 93%
+      top: 93% !important;
     }
 
     .mySwiper {

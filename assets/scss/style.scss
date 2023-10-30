@@ -13,6 +13,8 @@ body,
 select {
   font-family: Eczar, sans-serif;
   font-size: 1rem;
+  background-color: $c-main;
+
 }
 
 body {
@@ -23,4 +25,5 @@ body {
 
 @import 'header';
 @import 'hero';
+@import 'advantages';
 @import 'footer';

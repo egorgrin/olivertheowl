@@ -1,0 +1,159 @@
+.banner {
+  width: auto;
+  border-radius: $brad;
+  text-align: center;
+  box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
+
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 2.5rem;
+  }
+
+  p {
+    font-size: 20px;
+    letter-spacing: 0.72px;
+    line-height: 32px;
+  }
+}
+
+
+.advantages {
+
+  .banner_wrapper {
+    @extend .flex;
+    padding: 20rem 5rem;
+    justify-content: center;
+    margin-top: 3rem;
+
+
+    .banner {
+      background-color: $blue-bg;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 4rem 3.5rem;
+      max-width: 90rem;
+    }
+  }
+
+  .banner_wrapper.b4 {
+    padding: 10rem 5rem;
+  }
+
+  .slider_wrapper {
+    .banner_wrapper {
+      height: 120vh;
+    }
+
+    .banner {
+      background-color: $c-main;
+      color: $c-text;
+      border: 2px solid $c-text;
+      max-width: 70rem;
+    }
+
+    .mySwiper3 {
+      position: relative;
+      width: 100%;
+    }
+
+    .slider {
+      position: relative;
+    }
+  }
+
+  .b1 {
+    background-image: url(../img/banners/b1.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .b2 {
+    background-image: url(../img/banners/b2.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .b3 {
+    background-image: url(../img/banners/b3.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .b4 {
+    background-image: url(../img/banners/b4.webp);
+    background-size: contain;
+    background-position: bottom center;
+  }
+
+  .b5 {
+    background-image: url(../img/banners/b5.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .s1 {
+    background-image: url(../img/banners/s1.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .s2 {
+    background-image: url(../img/banners/s2.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .s3 {
+    background-image: url(../img/banners/s3.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .s4 {
+    background-image: url(../img/banners/s4.webp);
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .advantages {
+    .banner_wrapper {
+      padding: 30rem 0 0rem;
+
+      .banner {
+        text-align: left;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        h2 {
+          font-size: 22px;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 16px;
+          letter-spacing: 0.72px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .slider_wrapper .banner_wrapper {
+      height: auto;
+      padding: 50rem 0 0rem;
+    }
+
+  }
+}
+
+@media (max-width: 423px) {
+  .banner {
+    padding: 3rem 2rem;
+  }
+}
