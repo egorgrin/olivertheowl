@@ -1,0 +1,103 @@
+footer {
+  padding: 5rem 0 2rem;
+  background-color: $footer-bg;
+
+  .upper {
+    display: flex;
+    @extend .wrapper;
+    padding: 0 5rem 5rem;
+
+    .links {
+      display: flex;
+      color: #fff;
+      flex-direction: column;
+      flex-basis: 70%;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      li {
+        margin-bottom: 2rem;
+      }
+
+      li a {
+        font-family: "Times New Roman", sans-serif;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1.4rem;
+      }
+    }
+
+    .logo_container {
+      width: 70px;
+    }
+  }
+
+  .devider {
+    border-top: solid 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .bottom {
+    @extend .wrapper;
+    display: flex;
+    padding: 3rem 5rem;
+    justify-content: flex-end;
+
+    .copyright_block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .list_payment {
+      display: flex;
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.84px;
+    }
+  }
+
+
+}
+
+
+@media (max-width: 767px) {
+  footer {
+    padding-bottom: 1rem;
+
+    .upper {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+
+      .links {
+        flex-basis: 100%;
+
+      }
+
+      .footer_logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+      }
+    }
+
+    .bottom {
+      justify-content: center;
+
+      .copyright_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
