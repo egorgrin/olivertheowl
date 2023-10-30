@@ -1,43 +1,17 @@
-.swiper {
-  min-width: 0;
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 13 |   background-color: $c-main;
+ *    |                     ^^^^^^^
+ *    '
+ *   assets\scss\swiper.scss 13:21  root stylesheet */
 
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-  height: auto;
-}
-
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-
-.mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.swiper-slide img {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 13 \2502    background-color: $c-main;\d\a    \2502                      ^^^^^^^\a    \2575 \a   assets\\scss\\swiper.scss 13:21  root stylesheet";
 }
-
-/*# sourceMappingURL=swiper.css.map */

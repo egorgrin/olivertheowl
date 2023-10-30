@@ -1,6 +1,7 @@
 $c-main: #ecc83c;
 $c-text: #355080;
-$c-text-pale: #636E6F;
+$c-text-pale: #636e6f;
+$brad: 12px;
 
 .flex {
   display: flex;
@@ -10,4 +11,25 @@ $c-text-pale: #636E6F;
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.brand_shadow {
+  &:before,
+  &:after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: $brad;
+  }
+
+  &:before {
+    box-shadow: rgb(53, 80, 128) 0px 4px 1px 0px;
+  }
+  &:after {
+    box-shadow: rgb(53, 80, 128) 0px 0px 0px 2px;
+  }
 }

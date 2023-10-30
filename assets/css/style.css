@@ -47,8 +47,21 @@ textarea {
   font-family: inherit;
 }
 
+input {
+  all: unset;
+}
+
 input::-ms-clear {
   display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+select {
+  appearance: none;
 }
 
 a, button {
@@ -89,7 +102,7 @@ h6 {
 }
 
 /*--------------------*/
-.flex, .hero .content, header .icons, header nav, header .logo, header .content {
+.flex, .hero .info_block .title, .hero .quantity, header .icons, header nav, header .logo, header .content {
   display: flex;
   align-items: center;
 }
@@ -99,25 +112,65 @@ h6 {
   margin: 0 auto;
 }
 
+.brand_shadow:before, .hero .quantity:before, .hero form .select:before, .brand_shadow:after, .hero .quantity:after, .hero form .select:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+}
+.brand_shadow:before, .hero .quantity:before, .hero form .select:before {
+  box-shadow: rgb(53, 80, 128) 0px 4px 1px 0px;
+}
+.brand_shadow:after, .hero .quantity:after, .hero form .select:after {
+  box-shadow: rgb(53, 80, 128) 0px 0px 0px 2px;
+}
+
 @font-face {
   font-display: swap;
   font-family: "Eczar";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/eczar.woff2") format("woff2");
+  src: url("../fonts/eczar.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Test";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/test.otf");
 }
 .swiper {
-  min-width: 0;
-  width: 100%;
-  height: 300px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecc83c;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.swiper-slide {
   background-size: cover;
   background-position: center;
-  height: auto;
+  border-radius: 15px;
+  border: 3px solid #355080;
 }
 
 .mySwiper2 {
@@ -126,7 +179,7 @@ h6 {
 }
 
 .mySwiper {
-  height: 20%;
+  height: 19%;
   box-sizing: border-box;
   padding: 10px 0;
 }
@@ -153,9 +206,17 @@ h6 {
   color: #355080;
 }
 
-body {
+html,
+body,
+select {
   font-family: Eczar, sans-serif;
   font-size: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 header {
@@ -177,7 +238,7 @@ header nav {
 }
 header nav a {
   padding: 0 1.2rem;
-  color: #636E6F;
+  color: #636e6f;
 }
 header nav a:hover {
   color: #355080;
@@ -238,14 +299,205 @@ header .burger .container.hide {
   background-color: #ecc83c;
 }
 .hero .content {
-  gap: 20px;
+  display: flex;
+  gap: 60px;
 }
 .hero .section {
   flex-basis: 50%;
   min-width: 0;
 }
-.hero .section .left {
+.hero .left {
+  padding: 0 0 2rem 5rem;
   display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.hero .slider {
+  padding-top: 2rem;
+  height: 600px;
+  position: sticky;
+  top: 0;
+}
+.hero .right > *,
+.hero .select,
+.hero form input {
+  margin-bottom: 1.6rem;
+}
+.hero .right {
+  padding: 2rem 5rem 2rem 0;
+}
+.hero .right h1 {
+  font-size: 52px;
+}
+.hero .right .reviews {
+  font-size: 1.6rem;
+}
+.hero .right .price {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.hero .right .tax {
+  font-size: 1.2rem;
+}
+.hero form {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.hero form input,
+.hero form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+.hero form select {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #ecc83c;
+  box-shadow: rgb(53, 80, 128) 0px 0px 0px 0px;
+  transition: box-shadow 0.2s ease;
+  padding: 0 2rem;
+  color: #355080;
+  font-size: 1.2rem;
+  border-radius: 12px;
+}
+.hero form select:focus, .hero form select:hover {
+  box-shadow: rgb(53, 80, 128) 0px 0px 0px 3px;
+  outline: 0;
+  transition: box-shadow 0.2s ease;
+}
+.hero form .select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 25rem;
+  height: 4.5rem;
+}
+.hero form .select:after {
+  border: 0.1rem solid transparent;
+}
+.hero form .select svg {
+  height: 0.6rem;
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 0.2rem);
+  right: calc(2px + 1.5rem);
+}
+.hero .quantity {
+  position: relative;
+  border-radius: 12px;
+  width: 25%;
+  min-height: 4.5rem;
+}
+.hero .quantity_button {
+  width: 4rem;
+  flex-shrink: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--color-foreground));
+  padding: 0;
+}
+.hero .quantity_button svg {
+  width: 1.2rem;
+}
+.hero .quantity_input {
+  font-size: 1.4rem;
+  opacity: 0.85;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+.hero .buttons_block {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.hero .buttons_block button {
+  position: relative;
+  height: 5rem;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background-color: #6C82A9;
+  transition: box-shadow 0.1s ease;
+}
+.hero .buttons_block button:before, .hero .buttons_block button:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 12px;
+}
+.hero .buttons_block button:before {
+  box-shadow: 0px 2px 5px 0px rgba(53, 80, 128, 0.9);
+}
+.hero .buttons_block button:hover {
+  box-shadow: rgba(108, 130, 169, 0.6) 0px 0px 0px 3px;
+  transition: box-shadow 0.1s ease;
+}
+.hero .info_block h2 {
+  font-size: 1.6rem;
+}
+.hero .info_block p {
+  font-family: "Times New Roman", sans-serif;
+  color: rgba(53, 80, 128, 0.75);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.hero .info_block a {
+  text-decoration: underline;
+  color: rgba(108, 130, 169, 0.85);
+  font-size: 1.5rem;
+}
+.hero .info_block a:hover {
+  color: rgb(108, 130, 169);
+}
+.hero .info_block .element {
+  border-top: 0.1rem solid rgba(53, 80, 128, 0.08);
+  border-bottom: 0.1rem solid rgba(53, 80, 128, 0.08);
+}
+.hero .info_block .title {
+  position: relative;
+  padding: 2rem 0;
+}
+.hero .info_block .title .icon {
+  margin-right: 1rem;
+  width: 26px;
+  height: 26px;
+}
+.hero .info_block .title .expand_btn {
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.hero .info_block .title .expand_btn .arr {
+  height: 0.6rem;
+  pointer-events: none;
+}
+.hero .info_block .title svg {
+  fill: #355080;
+}
+.hero .info_block .accordion_content {
+  margin-bottom: 1.5rem;
+}
+.hero .info_block .accordion_content img {
+  box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
+  border: 2px solid rgb(53, 80, 128);
+  border-radius: 12px;
+  max-width: 85%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -39,8 +39,18 @@ button,
 textarea {
   font-family: inherit;
 }
+input {
+  all: unset;
+}
 input::-ms-clear {
   display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+select {
+	appearance: none;
 }
 a, button {
   cursor: pointer;

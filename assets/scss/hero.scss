@@ -2,9 +2,9 @@
   background-color: $c-main;
 
   .content {
-    @extend .flex;
+    display: flex;
     @extend .wrapper;
-    gap: 20px;
+    gap: 60px;
 
   }
 
@@ -12,9 +12,242 @@
     flex-basis: 50%;
     //Swiper bug fix
     min-width: 0;
-    .left {
-      display: flex;
+  }
+
+  .left {
+    padding: 0 0 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .slider {
+    padding-top: 2rem;
+    height: 600px;
+    position: sticky;
+    top: 0
+  }
+
+  .right > *,
+  .select,
+  form input {
+    margin-bottom: 1.6rem;
+  }
+
+  .right {
+    padding: 2rem 5rem 2rem 0;
+
+    h1 {
+      font-size: 52px;
+    }
+
+    .reviews {
+      font-size: 1.6rem;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tax {
+      font-size: 1.2rem;
     }
   }
 
+  form {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    input,
+    label {
+      display: block;
+      margin-bottom: 0.6rem;
+      font-size: 1.3rem;
+    }
+
+    select {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background-color: $c-main;
+      box-shadow: rgb(53, 80, 128) 0px 0px 0px 0px;
+      transition: box-shadow 0.2s ease;
+      padding: 0 2rem;
+      color: $c-text;
+      font-size: 1.2rem;
+      border-radius: $brad;
+
+
+      &:focus,
+      &:hover {
+        box-shadow: rgb(53, 80, 128) 0px 0px 0px 3px;
+        outline: 0;
+        transition: box-shadow 0.2s ease;
+
+      }
+    }
+
+    .select {
+      @extend .brand_shadow;
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 25rem;
+      height: 4.5rem;
+
+      &:after {
+        border: 0.1rem solid transparent;
+      }
+
+      & svg {
+        height: 0.6rem;
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 0.2rem);
+        right: calc(2px + 1.5rem);
+      }
+    }
+  }
+
+  .quantity {
+    position: relative;
+    @extend .flex;
+    @extend .brand_shadow;
+    border-radius: $brad;
+    width: 25%;
+    min-height: 4.5rem;
+  }
+
+  .quantity_button {
+    width: 4rem;
+    flex-shrink: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--color-foreground));
+    padding: 0;
+  }
+
+  .quantity_button svg {
+    width: 1.2rem;
+  }
+
+  .quantity_input {
+    font-size: 1.4rem;
+    opacity: .85;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .buttons_block {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    & button {
+      position: relative;
+      height: 5rem;
+      width: 100%;
+      border-radius: $brad;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      color: #fff;
+      background-color: #6C82A9;
+      transition: box-shadow 0.1s ease;
+
+      &:before,
+      &:after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: $brad;
+      }
+
+      &:before {
+        box-shadow: 0px 2px 5px 0px rgba(53, 80, 128, 0.9);
+      }
+
+      &:hover {
+        box-shadow: rgb(108, 130, 169, 0.6) 0px 0px 0px 3px;
+        transition: box-shadow 0.1s ease;
+      }
+    }
+  }
+
+  .info_block {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-family: "Times New Roman", sans-serif;
+      color: rgba(53, 80, 128, 0.75);
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: underline;
+      color: rgba(108, 130, 169, 0.85);
+      font-size: 1.5rem;
+
+      &:hover {
+        color: rgba(108, 130, 169, 1);
+      }
+    }
+
+    .element {
+      border-top: 0.1rem solid rgba(53, 80, 128, 0.08);
+      border-bottom: 0.1rem solid rgba(53, 80, 128, 0.08);
+    }
+
+    .title {
+      @extend .flex;
+      position: relative;
+      padding: 2rem 0;
+
+      .icon {
+        margin-right: 1rem;
+        width: 26px;
+        height: 26px;
+      }
+
+      .expand_btn {
+        cursor: pointer;
+        padding: 1rem;
+        margin-left: auto;
+        margin-right: 1rem;
+        .arr {
+          height: 0.6rem;
+          pointer-events: none;
+        }
+      }
+      & svg {
+        fill: $c-text;
+      }
+    }
+
+    .accordion_content {
+      margin-bottom: 1.5rem;
+
+      & img {
+        box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
+        border: 2px solid rgb(53, 80, 128);
+        border-radius: $brad;
+        max-width: 85%;
+      }
+    }
+  }
 }

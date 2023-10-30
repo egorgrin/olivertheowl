@@ -1,17 +1,25 @@
-@import "cssdrop";
-@import "service";
-@import "fonts";
-@import "swiper";
+@import 'cssdrop';
+@import 'service';
+@import 'fonts';
+@import 'swiper';
 
 :root {
   font-size: 12px;
   color: $c-text;
 }
 
-body {
+html,
+body,
+select {
   font-family: Eczar, sans-serif;
   font-size: 1rem;
 }
 
-@import "header";
-@import "hero";
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@import 'header';
+@import 'hero';
