@@ -1,0 +1,155 @@
+.reviews {
+  padding: 4rem 2rem;
+
+  .reviews_wrapper {
+    @extend .wrapper;
+
+
+    .title {
+      text-align: center;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .reviews_header {
+      @extend .flex;
+      justify-content: space-between;
+      padding: 2rem 0rem;
+      font-size: 1.6rem;
+      font-family: "Times New Roman", sans-serif;
+
+      .summary {
+        p {
+          margin-top: 1rem;
+        }
+
+        & i {
+          font-size: 1.2rem;
+          color: #fff;
+        }
+      }
+
+      .stats {
+        .stats_elem {
+          @extend .flex;
+          height: 14px;
+          margin-bottom: .9rem;
+
+          .stars i {
+            font-size: 1.2rem;
+            color: #fff;
+          }
+
+          .bar {
+            width: 140px;
+            height: 100%;
+            margin: 0 2rem;
+            background-color: #E6D48E;
+
+            .bar_inner {
+              width: 50%;
+              height: 100%;
+              background-color: #6C82A9;
+            }
+          }
+
+          .count {
+            font-family: "Times New Roman", sans-serif;
+            color: $c-text-pale;
+          }
+        }
+
+      }
+    }
+
+    .reviews_content {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+      border-top: 1px solid rgba(53, 80, 128, 0.08);
+      //border-bottom: 1px solid rgba(53, 80, 128, 0.08);
+
+      .review {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        & > * {
+          margin-bottom: 1.5rem;
+        }
+
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .date {
+            font-size: 1.3rem;
+            color: $c-text-pale;
+          }
+
+          .stars {
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        .user_info {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .avatar {
+            width: 25px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          span {
+            font-size: 1.6rem;
+            font-family: "Times New Roman", sans-serif;
+          }
+        }
+
+        .review_body {
+          font-size: 1.5rem;
+          color: rgba(53, 80, 128, 0.75);
+        }
+
+        .product_image {
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews .reviews_wrapper .reviews_header {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .reviews .reviews_wrapper .reviews_header .summary, .reviews .reviews_wrapper .reviews_header .stats {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .reviews .reviews_wrapper .reviews_header .stats .stats_elem {
+    justify-content: center;
+
+  }
+}

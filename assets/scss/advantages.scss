@@ -125,11 +125,13 @@
       padding: 30rem 0 0rem;
 
       .banner {
+        height: 100%;
         text-align: left;
         border-right: none;
         border-left: none;
         border-radius: 0;
         box-shadow: none;
+        min-height: 5rem;
 
         h2 {
           font-size: 22px;

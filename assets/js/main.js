@@ -42,7 +42,7 @@ const swiper3 = new Swiper('.mySwiper3', {
   spaceBetween: 10,
   slidesPerView: 1,
   autoplay: {
-    delay: 2000,
+    delay: 2500,
     disableOnInteraction: false,
   },
   navigation: {
