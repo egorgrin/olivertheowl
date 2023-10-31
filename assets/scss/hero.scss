@@ -139,11 +139,12 @@
     @extend .flex;
     @extend .btn_shadow;
     border-radius: $brad;
-    min-height: 4.5rem;
+    height: 4.5rem;
   }
 
 
   .quantity_button {
+    height: 100%;
     flex-shrink: 0;
     width: 4rem;
     border: 0;
