@@ -1,52 +1,36 @@
-/* const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // autoHeight: true,
-  slidesPerView: 5,
-  slideToClickedSlide: true,
-  direction: 'horizontal',
-  // loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+const header = document.querySelector('#header');
+const slider = document.querySelector('#top_slider');
+const headerHeight = header.clientHeight;
+let prevScrollPos = window.scrollY;
 
-}); */
 
-const swiper = new Swiper('.mySwiper', {
-  direction: 'horizontal',
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-const swiper2 = new Swiper('.mySwiper2', {
-  direction: 'horizontal',
-  spaceBetween: 10,
-  /*navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },*/
-  thumbs: {
-    swiper: swiper,
-  },
-});
-const swiper3 = new Swiper('.mySwiper3', {
-  loop: true,
-  direction: 'horizontal',
-  spaceBetween: 10,
-  slidesPerView: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+window.addEventListener('scroll', () => {
+
+  const currentScrollPos = window.scrollY;
+
+  if (currentScrollPos > headerHeight) {
+    header.style.transform = `translateY(-${headerHeight}px)`;
+    header.style.boxShadow = '0px 0px 10px 1px rgba(53, 80, 128, 0.2)';
+
+  } else if (currentScrollPos === 0) {
+    header.style.boxShadow = 'none';
+
+  } else {
+    header.style.position = 'static'; // или возвращай старое значение
+    header.style.top = 'auto'; // или возвращай старое значение
+    header.style.zIndex = 'auto'; // или возвращай старое значение
   }
+
+  if (currentScrollPos < prevScrollPos) {
+    slider.style.top = `100px`;
+    header.style.transform = `translateY(0px)`;
+    header.style.position = 'sticky';
+    header.style.top = '0';
+    header.style.zIndex = '2';
+  }
+  if (currentScrollPos > prevScrollPos) {
+    slider.style.top = `0px`;
+  }
+
+  prevScrollPos = currentScrollPos;
 });

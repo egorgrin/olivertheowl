@@ -26,6 +26,7 @@
     height: 600px;
     position: sticky;
     top: 0;
+    transition: top .2s ease;
 
     .swiper-button-next, .swiper-button-prev {
       color: rgba(53, 80, 128, 0.75);

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<header>
+<header id="header" style="transform: translateY(0px);">
   <div class="content">
 
     <div class="burger">
@@ -58,7 +58,7 @@
   <section class="hero">
     <div class="content">
       <div class="section left">
-        <div class="slider">
+        <div id="top_slider" class="slider">
           <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -483,8 +483,8 @@
           </div>
         </div>
       </div>
-      <div class="reviews_content">
-        <div class="review">
+      <div id="reviewsContainer" class="reviews_content">
+        <!--<div class="review">
           <div class="header">
             <div class="stars">
               <i class="fa-regular fa-star"></i>
@@ -507,31 +507,8 @@
           <div class="product_image">
             <img src="assets/img/reviews/r1.webp" alt="">
           </div>
-        </div>
-        <div class="review">
-          <div class="header">
-            <div class="stars">
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
-            <div class="date">11/17/2022</div>
-          </div>
-          <div class="user_info">
-            <div class="avatar">
-              <img src="assets/img/avatar.webp" alt="">
-            </div>
-            <span>Name</span>
-          </div>
-          <p class="review_body">
-            Wow, it's really cute. The size fits well, but it's a lot larger than I thought.
-          </p>
-          <div class="product_image">
-            <img src="assets/img/reviews/r1.webp" alt="">
-          </div>
-        </div>
+        </div>-->
+
       </div>
     </div>
 
@@ -657,6 +634,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/swiper-init.js"></script>
+<script src="assets/js/reviews.js"></script>
 </body>
 
 </html>

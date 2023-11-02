@@ -33,7 +33,6 @@ aside {
 
 html,
 body {
-  height: 100%;
   width: 100%;
   line-height: 1;
   -ms-text-size-adjust: 100%;
@@ -207,13 +206,17 @@ select {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 header {
   background-color: #ecc83c;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  transition: transform 0.2s ease;
 }
 header .content {
   height: 100px;
@@ -310,6 +313,7 @@ header .burger .container.hide {
   height: 600px;
   position: sticky;
   top: 0;
+  transition: top 0.2s ease;
 }
 .hero .slider .swiper-button-next, .hero .slider .swiper-button-prev {
   color: rgba(53, 80, 128, 0.75);

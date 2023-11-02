@@ -1,5 +1,9 @@
 header {
   background-color: $c-main;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  transition: transform .2s ease;
 
   .content {
     @extend .flex;
@@ -72,6 +76,7 @@ header {
       }
     }
   }
+
   @media (max-width: 1024px) {
     .burger {
       display: flex;
