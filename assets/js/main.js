@@ -64,11 +64,10 @@ function accordion() {
   const elements = document.querySelectorAll('.accordion_element');
 
   elements.forEach(element => {
-    const title = element.querySelector('.title');
     const content = element.querySelector('.accordion_content');
     const expandBtn = element.querySelector('.expand_btn');
 
-    title.addEventListener('click', () => {
+    element.addEventListener('click', () => {
       if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
         content.style.maxHeight = content.scrollHeight + 'px';

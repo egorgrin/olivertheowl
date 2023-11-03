@@ -482,6 +482,7 @@ header .burger .container.hide {
   border-top: 0.1rem solid rgba(53, 80, 128, 0.08);
   border-bottom: 0.1rem solid rgba(53, 80, 128, 0.08);
   padding: 2rem 0;
+  cursor: pointer;
 }
 .hero .info_block .title {
   position: relative;
@@ -492,8 +493,6 @@ header .burger .container.hide {
   height: 26px;
 }
 .hero .info_block .title .expand_btn {
-  cursor: pointer;
-  padding: 1rem;
   margin-left: auto;
   margin-right: 1rem;
   transition: scaleY 0.2s ease;
@@ -516,9 +515,6 @@ header .burger .container.hide {
   border: 2px solid rgb(53, 80, 128);
   border-radius: 12px;
   max-width: 85%;
-}
-.hero .info_block .accordion_content .title {
-  cursor: pointer;
 }
 
 @media (max-width: 991px) {
