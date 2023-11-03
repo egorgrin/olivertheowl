@@ -16,8 +16,8 @@
   <title>Document</title>
 </head>
 
-<body>
-<header>
+<body id="cart_page">
+<header id="header">
   <div class="content">
 
     <div class="burger">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <nav>
-      <a href="#">Home</a>
+      <a href="/olivertheowl/">Home</a>
       <a href="#">The Sharkies</a>
       <a href="#">Track Your Order</a>
       <a href="#">Contact</a>
@@ -74,13 +74,13 @@
           <div class="left">
             <div class="product_card">
               <div class="img">
-                <img src="/assets/img/products/p1.webp" alt="">
+                <img id="cartImage" src="/assets/img/products/p01.webp" alt="">
               </div>
               <div class="info">
-                <a href="#">Product Name</a>
+                <a href="#">Sharkies Slippers</a>
                 <p>€23,95</p>
-                <p>Color: <span>Mint Green</span></p>
-                <p>Size: <span>US Women's 11-12 | Men's 9-10</span></p>
+                <p>Color: <span id="cartColor"></span></p>
+                <p>Size: <span id="cartSize"></span></p>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                     </svg>
 
                   </button>
-                  <input class="quantity_input" type="number" name="quantity" id="" min="1" value="1" form="">
+                  <input id="cartQuantity" class="quantity_input" type="number" name="quantity" min="1" value="1">
                   <button class="quantity_button no-js-hidden" name="plus" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation"
                          class="icon icon-plus" fill="none" viewBox="0 0 10 10">
@@ -110,7 +110,7 @@
                   </button>
                 </div>
               </div>
-              <div class="remove_btn">
+              <!--<div class="remove_btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"
                      role="presentation" class="icon icon-remove">
                   <path
@@ -119,7 +119,7 @@
                     d="M6.55 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.45 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5z"
                     fill="currentColor"></path>
                 </svg>
-              </div>
+              </div>-->
             </div>
             <div class="price">€23,95
             </div>
@@ -263,7 +263,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../assets/js/swiper-init.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 
 </html>

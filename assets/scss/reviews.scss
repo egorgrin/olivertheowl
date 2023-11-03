@@ -138,17 +138,17 @@
 }
 
 @media (max-width: 767px) {
-  .reviews .reviews_wrapper .reviews_header {
+  .rating .reviews_wrapper .reviews_header {
     flex-wrap: wrap;
     gap: 3rem;
   }
 
-  .reviews .reviews_wrapper .reviews_header .summary, .reviews .reviews_wrapper .reviews_header .stats {
+  .rating .reviews_wrapper .reviews_header .summary, .rating .reviews_wrapper .reviews_header .stats {
     flex-basis: 100%;
     text-align: center;
   }
 
-  .reviews .reviews_wrapper .reviews_header .stats .stats_elem {
+  .rating .reviews_wrapper .reviews_header .stats .stats_elem {
     justify-content: center;
 
   }

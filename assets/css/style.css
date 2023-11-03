@@ -213,9 +213,9 @@ body {
 
 header {
   background-color: #ecc83c;
-  position: sticky;
+  /*position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 2;*/
   transition: transform 0.2s ease;
 }
 header .content {
@@ -233,7 +233,7 @@ header nav {
   font-size: 1.4rem;
 }
 header nav a {
-  padding: 0 1.2rem;
+  padding: 1.2rem;
   color: #636e6f;
 }
 header nav a:hover {
@@ -310,7 +310,7 @@ header .burger .container.hide {
 }
 .hero .slider {
   padding-top: 2rem;
-  height: 600px;
+  height: 700px;
   position: sticky;
   top: 0;
   transition: top 0.2s ease;
@@ -341,7 +341,7 @@ header .burger .container.hide {
 .hero .right h1 {
   font-size: 52px;
 }
-.hero .right .reviews {
+.hero .right .rating {
   font-size: 1.6rem;
 }
 .hero .right .price {
@@ -477,12 +477,14 @@ header .burger .container.hide {
   color: rgb(108, 130, 169);
 }
 .hero .info_block .element {
+  display: flex;
+  flex-direction: column;
   border-top: 0.1rem solid rgba(53, 80, 128, 0.08);
   border-bottom: 0.1rem solid rgba(53, 80, 128, 0.08);
+  padding: 2rem 0;
 }
 .hero .info_block .title {
   position: relative;
-  padding: 2rem 0;
 }
 .hero .info_block .title .icon {
   margin-right: 1rem;
@@ -494,6 +496,7 @@ header .burger .container.hide {
   padding: 1rem;
   margin-left: auto;
   margin-right: 1rem;
+  transition: scaleY 0.2s ease;
 }
 .hero .info_block .title .expand_btn .arr {
   height: 0.6rem;
@@ -503,13 +506,19 @@ header .burger .container.hide {
   fill: #355080;
 }
 .hero .info_block .accordion_content {
-  margin-bottom: 1.5rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease, margin 0.2s ease;
+  display: none;
 }
 .hero .info_block .accordion_content img {
   box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
   border: 2px solid rgb(53, 80, 128);
   border-radius: 12px;
   max-width: 85%;
+}
+.hero .info_block .accordion_content .title {
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {
@@ -520,13 +529,13 @@ header .burger .container.hide {
   .hero .left, .hero .right {
     padding: 2rem 5rem;
   }
-  .hero .right h1, .hero .right .reviews {
+  .hero .right h1, .hero .right .rating {
     text-align: center;
   }
   .hero .right .price_block {
     text-align: right;
   }
-  .hero .right .reviews span {
+  .hero .right .rating span {
     display: block;
     margin-top: 0.5rem;
   }
@@ -797,15 +806,15 @@ header .burger .container.hide {
 }
 
 @media (max-width: 767px) {
-  .reviews .reviews_wrapper .reviews_header {
+  .rating .reviews_wrapper .reviews_header {
     flex-wrap: wrap;
     gap: 3rem;
   }
-  .reviews .reviews_wrapper .reviews_header .summary, .reviews .reviews_wrapper .reviews_header .stats {
+  .rating .reviews_wrapper .reviews_header .summary, .rating .reviews_wrapper .reviews_header .stats {
     flex-basis: 100%;
     text-align: center;
   }
-  .reviews .reviews_wrapper .reviews_header .stats .stats_elem {
+  .rating .reviews_wrapper .reviews_header .stats .stats_elem {
     justify-content: center;
   }
 }

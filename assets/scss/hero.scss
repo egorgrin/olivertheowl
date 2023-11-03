@@ -23,7 +23,7 @@
 
   .slider {
     padding-top: 2rem;
-    height: 600px;
+    height: 700px;
     position: sticky;
     top: 0;
     transition: top .2s ease;
@@ -61,7 +61,7 @@
       font-size: 52px;
     }
 
-    .reviews {
+    .rating {
       font-size: 1.6rem;
     }
 
@@ -234,14 +234,18 @@
     }
 
     .element {
+      display: flex;
+      flex-direction: column;
       border-top: 0.1rem solid rgba(53, 80, 128, 0.08);
       border-bottom: 0.1rem solid rgba(53, 80, 128, 0.08);
+      padding: 2rem 0;
+
     }
+
 
     .title {
       @extend .flex;
       position: relative;
-      padding: 2rem 0;
 
       .icon {
         margin-right: 1rem;
@@ -254,6 +258,7 @@
         padding: 1rem;
         margin-left: auto;
         margin-right: 1rem;
+        transition: scaleY .2s ease;
 
         .arr {
           height: 0.6rem;
@@ -267,13 +272,20 @@
     }
 
     .accordion_content {
-      margin-bottom: 1.5rem;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease, margin 0.2s ease;
+      display: none;
 
       & img {
         box-shadow: rgb(53, 80, 128) 0px 6px 0px 0px;
         border: 2px solid rgb(53, 80, 128);
         border-radius: $brad;
         max-width: 85%;
+      }
+
+      .title {
+        cursor: pointer;
       }
     }
   }
@@ -291,7 +303,7 @@
     }
 
     .right {
-      h1, .reviews {
+      h1, .rating {
         text-align: center;
       }
 
@@ -299,7 +311,7 @@
         text-align: right;
       }
 
-      .reviews span {
+      .rating span {
         display: block;
         margin-top: .5rem;
       }
@@ -349,9 +361,11 @@
     .swiper-button-next, .swiper-button-prev {
       display: none;
     }
+
     .slider {
       height: 360px;
     }
+
     .swiper {
       width: 100%;
     }
